@@ -105,7 +105,7 @@ public class SmartPlayer extends put.ai.games.game.Player
         if (gameEnded(board) || retreat(board, timeLeft, depth))
         {
             System.out.println("Retreat");
-            return new MoveValue(-board.countStones(color));
+            return new MoveValue(board.countStones(getColor()));
         }
         List<Move> availableMoves = board.getMovesFor(color);
         MoveValue bestMove = new MoveValue(Integer.MAX_VALUE);
